@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Tourism Arrivals 1995–2020 — Interactive Explorer</title>
+  <link rel="stylesheet" href="./css/style.css" />
+  <script defer src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+  <script defer src="./js/main.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Tourism Arrivals 1995–2020</h1>
+    <p class="subtitle">Explore international tourist arrivals by country and region (World Bank WDI: ST.INT.ARVL)</p>
+    <details open>
+      <summary>How to use this interactive visualization</summary>
+      <ul>
+        <li><strong>Filter by Region:</strong> Use the Region dropdown to view specific geographic areas, or click legend items</li>
+        <li><strong>Filter by Country:</strong> Select individual countries to compare their tourism trends</li>
+        <li><strong>Change Measure:</strong> Switch between Total Arrivals, Year-over-Year Growth, Growth Rate, or Normalized view</li>
+        <li><strong>Time Range:</strong> Adjust the year sliders to focus on specific periods</li>
+        <li><strong>Animate:</strong> Click the Play button to watch tourism evolve year by year</li>
+        <li><strong>Hover:</strong> Mouse over any line to see detailed statistics and percentage changes</li>
+        <li><strong>Focus:</strong> Click any line to highlight it and dim others for comparison</li>
+        <li><strong>Zoom:</strong> Scroll to zoom in/out on the timeline; drag to pan</li>
+        <li><strong>Reset:</strong> Double-click the chart or use the Reset button to restore defaults</li>
+      </ul>
+    </details>
+  </header>
+
+  <section id="controls" aria-label="Filters">
+    <label>Region:
+      <select id="regionSelect"></select>
+    </label>
+    <label>Country:
+      <select id="countrySelect"></select>
+    </label>
+    <label>Measure:
+      <select id="measureSelect">
+        <option value="absolute">Total Arrivals</option>
+        <option value="growth">Year-over-Year Growth (%)</option>
+        <option value="growthRate">Growth Rate (Relative to 1995)</option>
+        <option value="perCapita">Per Capita (Normalized)</option>
+      </select>
+    </label>
+    <label class="range">Year: <output id="yearOut">1995–2020</output>
+      <input id="yearMin" type="range" min="1995" max="2020" step="1" value="1995" />
+      <input id="yearMax" type="range" min="1995" max="2020" step="1" value="2020" />
+    </label>
+    <button id="playBtn" type="button" aria-pressed="false">Play</button>
+    <button id="resetBtn" type="button">Reset</button>
+  </section>
+
+  <main>
+    <div id="chartWrap">
+      <svg id="chart" role="img" aria-label="International tourism arrivals"></svg>
+      <div id="tooltip" role="dialog" hidden></div>
+    </div>
+    <aside id="stats" aria-live="polite"></aside>
+  </main>
+
+  <footer>
+    <small>
+      <strong>Data Source:</strong> <a href="https://data.worldbank.org/indicator/ST.INT.ARVL" target="_blank" rel="noopener">World Bank WDI — International tourism, number of arrivals (1995–2020)</a> (License: CC BY 4.0)<br>
+      <strong>Built with:</strong> <a href="https://d3js.org/" target="_blank" rel="noopener">D3.js v7</a><br>
+      <strong>Inspiration:</strong> Dynamic query techniques from HomeFinder, NameGrapher, and Gapminder visualizations<br>
+      <strong>Interactive Features:</strong> Zoom & pan, dynamic filtering, animation, focus+context, details-on-demand tooltips
+    </small>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,270 @@
+/* Basic clean styling */
+:root {
+    --pad: 16px;
+    --font: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font);
+    color: #111;
+    background: #fff;
+}
+
+header, #controls, footer {
+    padding: var(--pad);
+    max-width: 1100px;
+    margin-inline: auto;
+}
+
+.subtitle {
+    color: #555;
+    margin-top: -6px;
+}
+
+#controls {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 12px;
+    align-items: center;
+    overflow-x: auto;
+}
+
+#controls label {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    min-width: 120px;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+#controls .range {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    min-width: 150px;
+}
+
+#chartWrap {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 var(--pad) var(--pad);
+    position: relative;
+}
+
+svg {
+    width: 100%;
+    height: 560px;
+    background: #fafafa;
+    border: 1px solid #eee;
+}
+
+#tooltip {
+    position: absolute;
+    pointer-events: none;
+    background: #fff;
+    border: 1px solid #ccc;
+    padding: 10px 12px;
+    border-radius: 6px;
+    box-shadow: 0 6px 24px rgba(0,0,0,.15);
+    font-size: 14px;
+    line-height: 1.5;
+    max-width: 280px;
+    z-index: 1000;
+}
+
+#tooltip .positive {
+    color: #2d8659;
+}
+
+#tooltip .negative {
+    color: #c44536;
+}
+
+#tooltip .neutral {
+    color: #666;
+}
+
+.axis text {
+    font-size: 12px;
+    fill: #222;
+}
+
+.axis path, .axis line {
+    stroke: #bbb;
+}
+
+.legend {
+    font-size: 12px;
+}
+
+button, select, input[type="range"] {
+    font: inherit;
+}
+
+#stats {
+    padding: 0 var(--pad);
+    max-width: 1100px;
+    margin: 8px auto 24px;
+    color: #333;
+    font-size: 14px;
+}
+
+.line {
+    fill: none;
+    stroke-width: 2px;
+    transition: stroke-width 0.2s ease, filter 0.2s ease;
+    cursor: pointer;
+}
+
+.series {
+    transition: opacity 0.3s ease;
+}
+
+.series.focused path {
+    stroke-width: 4px;
+}
+
+.legend-item {
+    transition: opacity 0.2s ease;
+}
+
+.legend-item:hover {
+    opacity: 0.7;
+}
+
+.grid line {
+    stroke: #eee;
+    stroke-opacity: 0.7;
+    shape-rendering: crispEdges;
+}
+
+.grid path {
+    stroke-width: 0;
+}
+
+button {
+    padding: 6px 12px;
+    background: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.1s ease;
+    font-size: 13px;
+    white-space: nowrap;
+}
+
+button:hover {
+    background: #e0e0e0;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+button[aria-pressed="true"] {
+    background: #4CAF50;
+    color: white;
+    border-color: #45a049;
+}
+
+select {
+    padding: 4px 6px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: white;
+    font-size: 13px;
+    min-width: 100px;
+}
+
+input[type="range"] {
+    padding: 0;
+    border: none;
+}
+
+select:focus, button:focus, input:focus {
+    outline: 2px solid #4CAF50;
+    outline-offset: 2px;
+}
+
+input[type="range"] {
+    width: 100%;
+    accent-color: #4CAF50;
+}
+
+#stats {
+    padding: 0 var(--pad);
+    max-width: 1100px;
+    margin: 8px auto 24px;
+    color: #333;
+    font-size: 14px;
+}
+
+#stats ol {
+    margin: 8px 0;
+    padding-left: 24px;
+}
+
+#stats li {
+    margin: 4px 0;
+}
+
+details {
+    margin: 12px 0;
+    padding: 12px;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+summary {
+    cursor: pointer;
+    font-weight: 600;
+    user-select: none;
+}
+
+summary:hover {
+    color: #4CAF50;
+}
+
+details ul {
+    margin-top: 8px;
+    padding-left: 24px;
+}
+
+details li {
+    margin: 6px 0;
+}
+
+.line-label {
+    font-family: var(--font);
+    font-size: 11px;
+    font-weight: 500;
+    pointer-events: none;
+    user-select: none;
+}
+
+footer {
+    border-top: 1px solid #ddd;
+    margin-top: 32px;
+    padding-top: 16px;
+}
+
+footer small {
+    line-height: 1.6;
+    color: #666;
+}
+
+footer a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}

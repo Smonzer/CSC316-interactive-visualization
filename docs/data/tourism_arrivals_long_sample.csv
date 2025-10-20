@@ -1,0 +1,573 @@
+country,iso3,region,year,arrivals
+Argentina,ARG,South America,1995,2300000
+Argentina,ARG,South America,1996,2420000
+Argentina,ARG,South America,1997,2540000
+Argentina,ARG,South America,1998,2660000
+Argentina,ARG,South America,1999,2780000
+Argentina,ARG,South America,2000,2900000
+Argentina,ARG,South America,2001,3080000
+Argentina,ARG,South America,2002,3260000
+Argentina,ARG,South America,2003,3440000
+Argentina,ARG,South America,2004,3620000
+Argentina,ARG,South America,2005,3800000
+Argentina,ARG,South America,2006,4100000
+Argentina,ARG,South America,2007,4400000
+Argentina,ARG,South America,2008,4700000
+Argentina,ARG,South America,2009,5000000
+Argentina,ARG,South America,2010,5300000
+Argentina,ARG,South America,2011,5380000
+Argentina,ARG,South America,2012,5460000
+Argentina,ARG,South America,2013,5540000
+Argentina,ARG,South America,2014,5620000
+Argentina,ARG,South America,2015,5700000
+Argentina,ARG,South America,2016,6125000
+Argentina,ARG,South America,2017,6550000
+Argentina,ARG,South America,2018,6975000
+Argentina,ARG,South America,2019,7400000
+Argentina,ARG,South America,2020,2600000
+Australia,AUS,Oceania,1995,4020000
+Australia,AUS,Oceania,1996,4196000
+Australia,AUS,Oceania,1997,4372000
+Australia,AUS,Oceania,1998,4548000
+Australia,AUS,Oceania,1999,4724000
+Australia,AUS,Oceania,2000,4900000
+Australia,AUS,Oceania,2001,5020000
+Australia,AUS,Oceania,2002,5140000
+Australia,AUS,Oceania,2003,5260000
+Australia,AUS,Oceania,2004,5380000
+Australia,AUS,Oceania,2005,5500000
+Australia,AUS,Oceania,2006,5590000
+Australia,AUS,Oceania,2007,5680000
+Australia,AUS,Oceania,2008,5770000
+Australia,AUS,Oceania,2009,5860000
+Australia,AUS,Oceania,2010,5950000
+Australia,AUS,Oceania,2011,6240000
+Australia,AUS,Oceania,2012,6530000
+Australia,AUS,Oceania,2013,6820000
+Australia,AUS,Oceania,2014,7110000
+Australia,AUS,Oceania,2015,7400000
+Australia,AUS,Oceania,2016,7937500
+Australia,AUS,Oceania,2017,8475000
+Australia,AUS,Oceania,2018,9012500
+Australia,AUS,Oceania,2019,9550000
+Australia,AUS,Oceania,2020,2760000
+Brazil,BRA,South America,1995,1990000
+Brazil,BRA,South America,1996,2652000
+Brazil,BRA,South America,1997,3314000
+Brazil,BRA,South America,1998,3976000
+Brazil,BRA,South America,1999,4638000
+Brazil,BRA,South America,2000,5300000
+Brazil,BRA,South America,2001,5320000
+Brazil,BRA,South America,2002,5340000
+Brazil,BRA,South America,2003,5360000
+Brazil,BRA,South America,2004,5380000
+Brazil,BRA,South America,2005,5400000
+Brazil,BRA,South America,2006,5360000
+Brazil,BRA,South America,2007,5320000
+Brazil,BRA,South America,2008,5280000
+Brazil,BRA,South America,2009,5240000
+Brazil,BRA,South America,2010,5200000
+Brazil,BRA,South America,2011,5420000
+Brazil,BRA,South America,2012,5640000
+Brazil,BRA,South America,2013,5860000
+Brazil,BRA,South America,2014,6080000
+Brazil,BRA,South America,2015,6300000
+Brazil,BRA,South America,2016,6325000
+Brazil,BRA,South America,2017,6350000
+Brazil,BRA,South America,2018,6375000
+Brazil,BRA,South America,2019,6400000
+Brazil,BRA,South America,2020,3000000
+Canada,CAN,North America,1995,14900000
+Canada,CAN,North America,1996,16000000
+Canada,CAN,North America,1997,17100000
+Canada,CAN,North America,1998,18200000
+Canada,CAN,North America,1999,19300000
+Canada,CAN,North America,2000,20400000
+Canada,CAN,North America,2001,20080000
+Canada,CAN,North America,2002,19760000
+Canada,CAN,North America,2003,19440000
+Canada,CAN,North America,2004,19120000
+Canada,CAN,North America,2005,18800000
+Canada,CAN,North America,2006,18260000
+Canada,CAN,North America,2007,17720000
+Canada,CAN,North America,2008,17180000
+Canada,CAN,North America,2009,16640000
+Canada,CAN,North America,2010,16100000
+Canada,CAN,North America,2011,16480000
+Canada,CAN,North America,2012,16860000
+Canada,CAN,North America,2013,17240000
+Canada,CAN,North America,2014,17620000
+Canada,CAN,North America,2015,18000000
+Canada,CAN,North America,2016,19050000
+Canada,CAN,North America,2017,20100000
+Canada,CAN,North America,2018,21150000
+Canada,CAN,North America,2019,22200000
+Canada,CAN,North America,2020,5390000
+China,CHN,Asia,1995,20000000
+China,CHN,Asia,1996,22240000
+China,CHN,Asia,1997,24480000
+China,CHN,Asia,1998,26720000
+China,CHN,Asia,1999,28960000
+China,CHN,Asia,2000,31200000
+China,CHN,Asia,2001,34320000
+China,CHN,Asia,2002,37440000
+China,CHN,Asia,2003,40560000
+China,CHN,Asia,2004,43680000
+China,CHN,Asia,2005,46800000
+China,CHN,Asia,2006,48580000
+China,CHN,Asia,2007,50360000
+China,CHN,Asia,2008,52140000
+China,CHN,Asia,2009,53920000
+China,CHN,Asia,2010,55700000
+China,CHN,Asia,2011,55940000
+China,CHN,Asia,2012,56180000
+China,CHN,Asia,2013,56420000
+China,CHN,Asia,2014,56660000
+China,CHN,Asia,2015,56900000
+China,CHN,Asia,2016,59100000
+China,CHN,Asia,2017,61300000
+China,CHN,Asia,2018,63500000
+China,CHN,Asia,2019,65700000
+China,CHN,Asia,2020,27500000
+Egypt,EGY,Africa,1995,2900000
+Egypt,EGY,Africa,1996,3340000
+Egypt,EGY,Africa,1997,3780000
+Egypt,EGY,Africa,1998,4220000
+Egypt,EGY,Africa,1999,4660000
+Egypt,EGY,Africa,2000,5100000
+Egypt,EGY,Africa,2001,5720000
+Egypt,EGY,Africa,2002,6340000
+Egypt,EGY,Africa,2003,6960000
+Egypt,EGY,Africa,2004,7580000
+Egypt,EGY,Africa,2005,8200000
+Egypt,EGY,Africa,2006,9380000
+Egypt,EGY,Africa,2007,10560000
+Egypt,EGY,Africa,2008,11740000
+Egypt,EGY,Africa,2009,12920000
+Egypt,EGY,Africa,2010,14100000
+Egypt,EGY,Africa,2011,13140000
+Egypt,EGY,Africa,2012,12180000
+Egypt,EGY,Africa,2013,11220000
+Egypt,EGY,Africa,2014,10260000
+Egypt,EGY,Africa,2015,9300000
+Egypt,EGY,Africa,2016,10225000
+Egypt,EGY,Africa,2017,11150000
+Egypt,EGY,Africa,2018,12075000
+Egypt,EGY,Africa,2019,13000000
+Egypt,EGY,Africa,2020,3500000
+France,FRA,Europe,1995,61500000
+France,FRA,Europe,1996,64640000
+France,FRA,Europe,1997,67780000
+France,FRA,Europe,1998,70920000
+France,FRA,Europe,1999,74060000
+France,FRA,Europe,2000,77200000
+France,FRA,Europe,2001,76960000
+France,FRA,Europe,2002,76720000
+France,FRA,Europe,2003,76480000
+France,FRA,Europe,2004,76240000
+France,FRA,Europe,2005,76000000
+France,FRA,Europe,2006,76260000
+France,FRA,Europe,2007,76520000
+France,FRA,Europe,2008,76780000
+France,FRA,Europe,2009,77040000
+France,FRA,Europe,2010,77300000
+France,FRA,Europe,2011,78740000
+France,FRA,Europe,2012,80180000
+France,FRA,Europe,2013,81620000
+France,FRA,Europe,2014,83060000
+France,FRA,Europe,2015,84500000
+France,FRA,Europe,2016,85875000
+France,FRA,Europe,2017,87250000
+France,FRA,Europe,2018,88625000
+France,FRA,Europe,2019,90000000
+France,FRA,Europe,2020,40600000
+Germany,DEU,Europe,1995,14800000
+Germany,DEU,Europe,1996,15640000
+Germany,DEU,Europe,1997,16480000
+Germany,DEU,Europe,1998,17320000
+Germany,DEU,Europe,1999,18160000
+Germany,DEU,Europe,2000,19000000
+Germany,DEU,Europe,2001,19500000
+Germany,DEU,Europe,2002,20000000
+Germany,DEU,Europe,2003,20500000
+Germany,DEU,Europe,2004,21000000
+Germany,DEU,Europe,2005,21500000
+Germany,DEU,Europe,2006,22580000
+Germany,DEU,Europe,2007,23660000
+Germany,DEU,Europe,2008,24740000
+Germany,DEU,Europe,2009,25820000
+Germany,DEU,Europe,2010,26900000
+Germany,DEU,Europe,2011,28520000
+Germany,DEU,Europe,2012,30140000
+Germany,DEU,Europe,2013,31760000
+Germany,DEU,Europe,2014,33380000
+Germany,DEU,Europe,2015,35000000
+Germany,DEU,Europe,2016,36150000
+Germany,DEU,Europe,2017,37300000
+Germany,DEU,Europe,2018,38450000
+Germany,DEU,Europe,2019,39600000
+Germany,DEU,Europe,2020,12900000
+Italy,ITA,Europe,1995,31100000
+Italy,ITA,Europe,1996,33120000
+Italy,ITA,Europe,1997,35140000
+Italy,ITA,Europe,1998,37160000
+Italy,ITA,Europe,1999,39180000
+Italy,ITA,Europe,2000,41200000
+Italy,ITA,Europe,2001,40260000
+Italy,ITA,Europe,2002,39320000
+Italy,ITA,Europe,2003,38380000
+Italy,ITA,Europe,2004,37440000
+Italy,ITA,Europe,2005,36500000
+Italy,ITA,Europe,2006,37920000
+Italy,ITA,Europe,2007,39340000
+Italy,ITA,Europe,2008,40760000
+Italy,ITA,Europe,2009,42180000
+Italy,ITA,Europe,2010,43600000
+Italy,ITA,Europe,2011,45020000
+Italy,ITA,Europe,2012,46440000
+Italy,ITA,Europe,2013,47860000
+Italy,ITA,Europe,2014,49280000
+Italy,ITA,Europe,2015,50700000
+Italy,ITA,Europe,2016,54150000
+Italy,ITA,Europe,2017,57600000
+Italy,ITA,Europe,2018,61050000
+Italy,ITA,Europe,2019,64500000
+Italy,ITA,Europe,2020,31400000
+Japan,JPN,Asia,1995,3300000
+Japan,JPN,Asia,1996,3600000
+Japan,JPN,Asia,1997,3900000
+Japan,JPN,Asia,1998,4200000
+Japan,JPN,Asia,1999,4500000
+Japan,JPN,Asia,2000,4800000
+Japan,JPN,Asia,2001,5180000
+Japan,JPN,Asia,2002,5560000
+Japan,JPN,Asia,2003,5940000
+Japan,JPN,Asia,2004,6320000
+Japan,JPN,Asia,2005,6700000
+Japan,JPN,Asia,2006,7080000
+Japan,JPN,Asia,2007,7460000
+Japan,JPN,Asia,2008,7840000
+Japan,JPN,Asia,2009,8220000
+Japan,JPN,Asia,2010,8600000
+Japan,JPN,Asia,2011,10820000
+Japan,JPN,Asia,2012,13040000
+Japan,JPN,Asia,2013,15260000
+Japan,JPN,Asia,2014,17480000
+Japan,JPN,Asia,2015,19700000
+Japan,JPN,Asia,2016,22775000
+Japan,JPN,Asia,2017,25850000
+Japan,JPN,Asia,2018,28925000
+Japan,JPN,Asia,2019,32000000
+Japan,JPN,Asia,2020,4100000
+Malaysia,MYS,Asia,1995,7500000
+Malaysia,MYS,Asia,1996,8040000
+Malaysia,MYS,Asia,1997,8580000
+Malaysia,MYS,Asia,1998,9120000
+Malaysia,MYS,Asia,1999,9660000
+Malaysia,MYS,Asia,2000,10200000
+Malaysia,MYS,Asia,2001,11440000
+Malaysia,MYS,Asia,2002,12680000
+Malaysia,MYS,Asia,2003,13920000
+Malaysia,MYS,Asia,2004,15160000
+Malaysia,MYS,Asia,2005,16400000
+Malaysia,MYS,Asia,2006,18040000
+Malaysia,MYS,Asia,2007,19680000
+Malaysia,MYS,Asia,2008,21320000
+Malaysia,MYS,Asia,2009,22960000
+Malaysia,MYS,Asia,2010,24600000
+Malaysia,MYS,Asia,2011,24820000
+Malaysia,MYS,Asia,2012,25040000
+Malaysia,MYS,Asia,2013,25260000
+Malaysia,MYS,Asia,2014,25480000
+Malaysia,MYS,Asia,2015,25700000
+Malaysia,MYS,Asia,2016,25800000
+Malaysia,MYS,Asia,2017,25900000
+Malaysia,MYS,Asia,2018,26000000
+Malaysia,MYS,Asia,2019,26100000
+Malaysia,MYS,Asia,2020,4300000
+Mexico,MEX,North America,1995,20200000
+Mexico,MEX,North America,1996,20280000
+Mexico,MEX,North America,1997,20360000
+Mexico,MEX,North America,1998,20440000
+Mexico,MEX,North America,1999,20520000
+Mexico,MEX,North America,2000,20600000
+Mexico,MEX,North America,2001,20860000
+Mexico,MEX,North America,2002,21120000
+Mexico,MEX,North America,2003,21380000
+Mexico,MEX,North America,2004,21640000
+Mexico,MEX,North America,2005,21900000
+Mexico,MEX,North America,2006,22180000
+Mexico,MEX,North America,2007,22460000
+Mexico,MEX,North America,2008,22740000
+Mexico,MEX,North America,2009,23020000
+Mexico,MEX,North America,2010,23300000
+Mexico,MEX,North America,2011,25060000
+Mexico,MEX,North America,2012,26820000
+Mexico,MEX,North America,2013,28580000
+Mexico,MEX,North America,2014,30340000
+Mexico,MEX,North America,2015,32100000
+Mexico,MEX,North America,2016,35325000
+Mexico,MEX,North America,2017,38550000
+Mexico,MEX,North America,2018,41775000
+Mexico,MEX,North America,2019,45000000
+Mexico,MEX,North America,2020,24300000
+Morocco,MAR,Africa,1995,2600000
+Morocco,MAR,Africa,1996,2940000
+Morocco,MAR,Africa,1997,3280000
+Morocco,MAR,Africa,1998,3620000
+Morocco,MAR,Africa,1999,3960000
+Morocco,MAR,Africa,2000,4300000
+Morocco,MAR,Africa,2001,4600000
+Morocco,MAR,Africa,2002,4900000
+Morocco,MAR,Africa,2003,5200000
+Morocco,MAR,Africa,2004,5500000
+Morocco,MAR,Africa,2005,5800000
+Morocco,MAR,Africa,2006,6500000
+Morocco,MAR,Africa,2007,7200000
+Morocco,MAR,Africa,2008,7900000
+Morocco,MAR,Africa,2009,8600000
+Morocco,MAR,Africa,2010,9300000
+Morocco,MAR,Africa,2011,9480000
+Morocco,MAR,Africa,2012,9660000
+Morocco,MAR,Africa,2013,9840000
+Morocco,MAR,Africa,2014,10020000
+Morocco,MAR,Africa,2015,10200000
+Morocco,MAR,Africa,2016,10875000
+Morocco,MAR,Africa,2017,11550000
+Morocco,MAR,Africa,2018,12225000
+Morocco,MAR,Africa,2019,12900000
+Morocco,MAR,Africa,2020,3600000
+New Zealand,NZL,Oceania,1995,1400000
+New Zealand,NZL,Oceania,1996,1480000
+New Zealand,NZL,Oceania,1997,1560000
+New Zealand,NZL,Oceania,1998,1640000
+New Zealand,NZL,Oceania,1999,1720000
+New Zealand,NZL,Oceania,2000,1800000
+New Zealand,NZL,Oceania,2001,1920000
+New Zealand,NZL,Oceania,2002,2040000
+New Zealand,NZL,Oceania,2003,2160000
+New Zealand,NZL,Oceania,2004,2280000
+New Zealand,NZL,Oceania,2005,2400000
+New Zealand,NZL,Oceania,2006,2420000
+New Zealand,NZL,Oceania,2007,2440000
+New Zealand,NZL,Oceania,2008,2460000
+New Zealand,NZL,Oceania,2009,2480000
+New Zealand,NZL,Oceania,2010,2500000
+New Zealand,NZL,Oceania,2011,2620000
+New Zealand,NZL,Oceania,2012,2740000
+New Zealand,NZL,Oceania,2013,2860000
+New Zealand,NZL,Oceania,2014,2980000
+New Zealand,NZL,Oceania,2015,3100000
+New Zealand,NZL,Oceania,2016,3300000
+New Zealand,NZL,Oceania,2017,3500000
+New Zealand,NZL,Oceania,2018,3700000
+New Zealand,NZL,Oceania,2019,3900000
+New Zealand,NZL,Oceania,2020,1100000
+Singapore,SGP,Asia,1995,6100000
+Singapore,SGP,Asia,1996,6260000
+Singapore,SGP,Asia,1997,6420000
+Singapore,SGP,Asia,1998,6580000
+Singapore,SGP,Asia,1999,6740000
+Singapore,SGP,Asia,2000,6900000
+Singapore,SGP,Asia,2001,6940000
+Singapore,SGP,Asia,2002,6980000
+Singapore,SGP,Asia,2003,7020000
+Singapore,SGP,Asia,2004,7060000
+Singapore,SGP,Asia,2005,7100000
+Singapore,SGP,Asia,2006,7520000
+Singapore,SGP,Asia,2007,7940000
+Singapore,SGP,Asia,2008,8360000
+Singapore,SGP,Asia,2009,8780000
+Singapore,SGP,Asia,2010,9200000
+Singapore,SGP,Asia,2011,9780000
+Singapore,SGP,Asia,2012,10360000
+Singapore,SGP,Asia,2013,10940000
+Singapore,SGP,Asia,2014,11520000
+Singapore,SGP,Asia,2015,12100000
+Singapore,SGP,Asia,2016,12750000
+Singapore,SGP,Asia,2017,13400000
+Singapore,SGP,Asia,2018,14050000
+Singapore,SGP,Asia,2019,14700000
+Singapore,SGP,Asia,2020,2700000
+South Africa,ZAF,Africa,1995,4700000
+South Africa,ZAF,Africa,1996,4960000
+South Africa,ZAF,Africa,1997,5220000
+South Africa,ZAF,Africa,1998,5480000
+South Africa,ZAF,Africa,1999,5740000
+South Africa,ZAF,Africa,2000,6000000
+South Africa,ZAF,Africa,2001,6300000
+South Africa,ZAF,Africa,2002,6600000
+South Africa,ZAF,Africa,2003,6900000
+South Africa,ZAF,Africa,2004,7200000
+South Africa,ZAF,Africa,2005,7500000
+South Africa,ZAF,Africa,2006,7620000
+South Africa,ZAF,Africa,2007,7740000
+South Africa,ZAF,Africa,2008,7860000
+South Africa,ZAF,Africa,2009,7980000
+South Africa,ZAF,Africa,2010,8100000
+South Africa,ZAF,Africa,2011,8260000
+South Africa,ZAF,Africa,2012,8420000
+South Africa,ZAF,Africa,2013,8580000
+South Africa,ZAF,Africa,2014,8740000
+South Africa,ZAF,Africa,2015,8900000
+South Africa,ZAF,Africa,2016,9225000
+South Africa,ZAF,Africa,2017,9550000
+South Africa,ZAF,Africa,2018,9875000
+South Africa,ZAF,Africa,2019,10200000
+South Africa,ZAF,Africa,2020,2800000
+Spain,ESP,Europe,1995,34300000
+Spain,ESP,Europe,1996,37140000
+Spain,ESP,Europe,1997,39980000
+Spain,ESP,Europe,1998,42820000
+Spain,ESP,Europe,1999,45660000
+Spain,ESP,Europe,2000,48500000
+Spain,ESP,Europe,2001,49980000
+Spain,ESP,Europe,2002,51460000
+Spain,ESP,Europe,2003,52940000
+Spain,ESP,Europe,2004,54420000
+Spain,ESP,Europe,2005,55900000
+Spain,ESP,Europe,2006,55260000
+Spain,ESP,Europe,2007,54620000
+Spain,ESP,Europe,2008,53980000
+Spain,ESP,Europe,2009,53340000
+Spain,ESP,Europe,2010,52700000
+Spain,ESP,Europe,2011,55800000
+Spain,ESP,Europe,2012,58900000
+Spain,ESP,Europe,2013,62000000
+Spain,ESP,Europe,2014,65100000
+Spain,ESP,Europe,2015,68200000
+Spain,ESP,Europe,2016,72025000
+Spain,ESP,Europe,2017,75850000
+Spain,ESP,Europe,2018,79675000
+Spain,ESP,Europe,2019,83500000
+Spain,ESP,Europe,2020,37100000
+Thailand,THA,Asia,1995,7020000
+Thailand,THA,Asia,1996,7536000
+Thailand,THA,Asia,1997,8052000
+Thailand,THA,Asia,1998,8568000
+Thailand,THA,Asia,1999,9084000
+Thailand,THA,Asia,2000,9600000
+Thailand,THA,Asia,2001,9980000
+Thailand,THA,Asia,2002,10360000
+Thailand,THA,Asia,2003,10740000
+Thailand,THA,Asia,2004,11120000
+Thailand,THA,Asia,2005,11500000
+Thailand,THA,Asia,2006,12380000
+Thailand,THA,Asia,2007,13260000
+Thailand,THA,Asia,2008,14140000
+Thailand,THA,Asia,2009,15020000
+Thailand,THA,Asia,2010,15900000
+Thailand,THA,Asia,2011,18700000
+Thailand,THA,Asia,2012,21500000
+Thailand,THA,Asia,2013,24300000
+Thailand,THA,Asia,2014,27100000
+Thailand,THA,Asia,2015,29900000
+Thailand,THA,Asia,2016,32400000
+Thailand,THA,Asia,2017,34900000
+Thailand,THA,Asia,2018,37400000
+Thailand,THA,Asia,2019,39900000
+Thailand,THA,Asia,2020,6700000
+Turkey,TUR,Middle East,1995,7700000
+Turkey,TUR,Middle East,1996,8080000
+Turkey,TUR,Middle East,1997,8460000
+Turkey,TUR,Middle East,1998,8840000
+Turkey,TUR,Middle East,1999,9220000
+Turkey,TUR,Middle East,2000,9600000
+Turkey,TUR,Middle East,2001,11740000
+Turkey,TUR,Middle East,2002,13880000
+Turkey,TUR,Middle East,2003,16020000
+Turkey,TUR,Middle East,2004,18160000
+Turkey,TUR,Middle East,2005,20300000
+Turkey,TUR,Middle East,2006,21640000
+Turkey,TUR,Middle East,2007,22980000
+Turkey,TUR,Middle East,2008,24320000
+Turkey,TUR,Middle East,2009,25660000
+Turkey,TUR,Middle East,2010,27000000
+Turkey,TUR,Middle East,2011,28840000
+Turkey,TUR,Middle East,2012,30680000
+Turkey,TUR,Middle East,2013,32520000
+Turkey,TUR,Middle East,2014,34360000
+Turkey,TUR,Middle East,2015,36200000
+Turkey,TUR,Middle East,2016,38600000
+Turkey,TUR,Middle East,2017,41000000
+Turkey,TUR,Middle East,2018,43400000
+Turkey,TUR,Middle East,2019,45800000
+Turkey,TUR,Middle East,2020,12700000
+United Arab Emirates,ARE,Middle East,1995,2300000
+United Arab Emirates,ARE,Middle East,1996,2620000
+United Arab Emirates,ARE,Middle East,1997,2940000
+United Arab Emirates,ARE,Middle East,1998,3260000
+United Arab Emirates,ARE,Middle East,1999,3580000
+United Arab Emirates,ARE,Middle East,2000,3900000
+United Arab Emirates,ARE,Middle East,2001,4540000
+United Arab Emirates,ARE,Middle East,2002,5180000
+United Arab Emirates,ARE,Middle East,2003,5820000
+United Arab Emirates,ARE,Middle East,2004,6460000
+United Arab Emirates,ARE,Middle East,2005,7100000
+United Arab Emirates,ARE,Middle East,2006,7300000
+United Arab Emirates,ARE,Middle East,2007,7500000
+United Arab Emirates,ARE,Middle East,2008,7700000
+United Arab Emirates,ARE,Middle East,2009,7900000
+United Arab Emirates,ARE,Middle East,2010,8100000
+United Arab Emirates,ARE,Middle East,2011,9320000
+United Arab Emirates,ARE,Middle East,2012,10540000
+United Arab Emirates,ARE,Middle East,2013,11760000
+United Arab Emirates,ARE,Middle East,2014,12980000
+United Arab Emirates,ARE,Middle East,2015,14200000
+United Arab Emirates,ARE,Middle East,2016,14825000
+United Arab Emirates,ARE,Middle East,2017,15450000
+United Arab Emirates,ARE,Middle East,2018,16075000
+United Arab Emirates,ARE,Middle East,2019,16700000
+United Arab Emirates,ARE,Middle East,2020,5500000
+United Kingdom,GBR,Europe,1995,20800000
+United Kingdom,GBR,Europe,1996,21680000
+United Kingdom,GBR,Europe,1997,22560000
+United Kingdom,GBR,Europe,1998,23440000
+United Kingdom,GBR,Europe,1999,24320000
+United Kingdom,GBR,Europe,2000,25200000
+United Kingdom,GBR,Europe,2001,25760000
+United Kingdom,GBR,Europe,2002,26320000
+United Kingdom,GBR,Europe,2003,26880000
+United Kingdom,GBR,Europe,2004,27440000
+United Kingdom,GBR,Europe,2005,28000000
+United Kingdom,GBR,Europe,2006,28060000
+United Kingdom,GBR,Europe,2007,28120000
+United Kingdom,GBR,Europe,2008,28180000
+United Kingdom,GBR,Europe,2009,28240000
+United Kingdom,GBR,Europe,2010,28300000
+United Kingdom,GBR,Europe,2011,29520000
+United Kingdom,GBR,Europe,2012,30740000
+United Kingdom,GBR,Europe,2013,31960000
+United Kingdom,GBR,Europe,2014,33180000
+United Kingdom,GBR,Europe,2015,34400000
+United Kingdom,GBR,Europe,2016,36025000
+United Kingdom,GBR,Europe,2017,37650000
+United Kingdom,GBR,Europe,2018,39275000
+United Kingdom,GBR,Europe,2019,40900000
+United Kingdom,GBR,Europe,2020,11100000
+United States,USA,North America,1995,43900000
+United States,USA,North America,1996,45360000
+United States,USA,North America,1997,46820000
+United States,USA,North America,1998,48280000
+United States,USA,North America,1999,49740000
+United States,USA,North America,2000,51200000
+United States,USA,North America,2001,50800000
+United States,USA,North America,2002,50400000
+United States,USA,North America,2003,50000000
+United States,USA,North America,2004,49600000
+United States,USA,North America,2005,49200000
+United States,USA,North America,2006,51360000
+United States,USA,North America,2007,53520000
+United States,USA,North America,2008,55680000
+United States,USA,North America,2009,57840000
+United States,USA,North America,2010,60000000
+United States,USA,North America,2011,63500000
+United States,USA,North America,2012,67000000
+United States,USA,North America,2013,70500000
+United States,USA,North America,2014,74000000
+United States,USA,North America,2015,77500000
+United States,USA,North America,2016,78025000
+United States,USA,North America,2017,78550000
+United States,USA,North America,2018,79075000
+United States,USA,North America,2019,79600000
+United States,USA,North America,2020,19600000
