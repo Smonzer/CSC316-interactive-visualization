@@ -22,7 +22,7 @@ const tooltip = d3.select("#tooltip");
 
 // Zoom behavior
 const zoom = d3.zoom()
-    .scaleExtent([0.5, 10])
+    .scaleExtent([1, 10])
     .on("zoom", zoomed);
 
 const regionSelect = document.getElementById("regionSelect");
@@ -429,10 +429,31 @@ function stopPlay(){
 }
 
 function zoomed(event) {
-  currentTransform = event.transform;
-  const newX = currentTransform.rescaleX(x);
-
+  let newX = event.transform.rescaleX(x);
+  const domain = newX.domain();
   const min = +yearMin.value, max = +yearMax.value;
+  const range = domain[1] - domain[0];
+
+  let adjustedDomain = [...domain];
+
+  if (domain[0] < min) {
+    adjustedDomain = [min, min + range];
+  }
+  if (domain[1] > max) {
+    adjustedDomain = [max - range, max];
+  }
+
+  if (adjustedDomain[0] !== domain[0] || adjustedDomain[1] !== domain[1]) {
+    newX = newX.copy().domain(adjustedDomain);
+    const newTransform = event.transform.rescaleX(x.copy().domain(adjustedDomain));
+    svg.call(zoom.transform, d3.zoomIdentity
+      .scale(innerW / (x(adjustedDomain[1]) - x(adjustedDomain[0])))
+      .translate(-x(adjustedDomain[0]), 0));
+    return;
+  }
+
+  currentTransform = event.transform;
+
   gx.call(d3.axisBottom(newX).tickFormat(d3.format("d")).ticks(Math.min(10, max - min + 1)));
   gridX.call(d3.axisBottom(newX).tickSize(-innerH).tickFormat("").ticks(Math.min(10, max - min + 1)))
     .call(g => g.select(".domain").remove())
