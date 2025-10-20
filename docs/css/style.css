@@ -65,7 +65,7 @@ svg {
 }
 
 #tooltip {
-    position: absolute;
+    position: fixed;
     pointer-events: none;
     background: #fff;
     border: 1px solid #ccc;
