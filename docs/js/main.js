@@ -561,23 +561,25 @@ function updateStats(data){
   if (min === max) {
     const topCountries = data
       .map(d => {
-        const val = d.values.find(v => v.year === min);
+        const sourceData = d.originalValues || d.values;
+        const val = sourceData.find(v => v.year === min);
         return { country: d.country, region: d.region, arrivals: val ? val.arrivals : 0 };
       })
       .filter(d => d.arrivals > 0)
       .sort((a, b) => d3.descending(a.arrivals, b.arrivals))
       .slice(0, 5);
-    const items = topCountries.map(d => `<li>${d.country} — ${d3.format(",")(d.arrivals)}</li>`).join("");
+    const items = topCountries.map(d => `<li>${d.country}: ${d3.format(",")(d.arrivals)}</li>`).join("");
     stats.innerHTML = `<strong>Top destinations (${min}):</strong><ol>${items || "<li>n/a</li>"}</ol>`;
   } else {
     // compute top growth countries in range
     const growth = data.map(d => {
-      const first = d.values.find(v => v.year === min);
-      const last = d.values.find(v => v.year === max);
+      const sourceData = d.originalValues || d.values;
+      const first = sourceData.find(v => v.year === min);
+      const last = sourceData.find(v => v.year === max);
       const g = (first && last && first.arrivals > 0) ? ((last.arrivals - first.arrivals) / first.arrivals) : null;
       return { country: d.country, region: d.region, growth: g, first: first, last: last };
     }).filter(d => d.growth !== null && !isNaN(d.growth)).sort((a, b) => d3.descending(a.growth, b.growth)).slice(0, 5);
-    const items = growth.map(d => `<li>${d.country} — ${d.growth > 0 ? '+' : ''}${(d.growth * 100).toFixed(1)}%</li>`).join("");
+    const items = growth.map(d => `<li>${d.country}: ${d.growth > 0 ? '+' : ''}${(d.growth * 100).toFixed(1)}%</li>`).join("");
     stats.innerHTML = `<strong>Top growth (${min}–${max}):</strong><ol>${items || "<li>n/a</li>"}</ol>`;
   }
 }
