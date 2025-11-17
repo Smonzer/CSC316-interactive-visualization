@@ -16,7 +16,7 @@ const gridY = g.append("g").attr("class", "grid grid--y");
 const linesG = g.append("g").attr("class", "lines").attr("clip-path", "url(#clip)");
 const labelsG = g.append("g").attr("class", "line-labels");
 const legendG = svg.append("g").attr("class", "legend");
-const xLabel = svg.append("text").attr("text-anchor", "middle").attr("dy", "-6");
+const xLabel = svg.append("text").attr("text-anchor", "middle").attr("dy", "0");
 const yLabel = svg.append("text").attr("text-anchor", "middle").attr("transform", "rotate(-90)");
 const tooltip = d3.select("#tooltip");
 
@@ -63,8 +63,7 @@ function resize() {
   gx.attr("transform", `translate(0,${innerH})`);
   gridX.attr("transform", `translate(0,${innerH})`);
 
-  xLabel.attr("x", width / 2).attr("y", height - 8).text("Year");
-  updateYAxisLabel();
+  xLabel.attr("x", width / 2).attr("y", height - 4).text("Year");
 
   legendG.attr("transform", `translate(${width - margin.right + 10}, ${margin.top})`);
 
@@ -94,7 +93,7 @@ d3.csv(DATA_URL, d3.autoType).then(csv => {
 
   regionSelect.addEventListener("change", render);
   countrySelect.addEventListener("change", render);
-  measureSelect.addEventListener("change", () => { updateYAxisLabel(); render(true); });
+  measureSelect.addEventListener("change", () => { render(true); });
   yearMin.addEventListener("input", syncYears);
   yearMax.addEventListener("input", syncYears);
   playBtn.addEventListener("click", togglePlay);
@@ -111,7 +110,22 @@ function syncYears(){
   render(true);
 }
 
-function updateYAxisLabel() {
+function getScaleInfo(maxValue, measure) {
+  // For percentage measures, no scaling needed
+  if (measure === "growth" || measure === "growthRate" || measure === "perCapita") {
+    return { divisor: 1, suffix: "" };
+  }
+
+  // For absolute values, determine appropriate scale
+  if (maxValue >= 1000000) {
+    return { divisor: 1000000, suffix: " (millions)" };
+  } else if (maxValue >= 1000) {
+    return { divisor: 1000, suffix: " (thousands)" };
+  }
+  return { divisor: 1, suffix: "" };
+}
+
+function updateYAxisLabel(scaleSuffix = "") {
   const measure = measureSelect.value;
   let label;
 
@@ -127,11 +141,45 @@ function updateYAxisLabel() {
       break;
     case "absolute":
     default:
-      label = "International Tourist Arrivals";
+      label = "International Tourist Arrivals" + scaleSuffix;
       break;
   }
 
-  yLabel.attr("x", -(height / 2)).attr("y", 16).text(label);
+  yLabel.attr("x", -(height / 2)).attr("y", 12).text(label);
+}
+
+function getFilteredFullRange(){
+  const r = regionSelect.value;
+  const c = countrySelect.value;
+
+  let subset = byCountry.filter(d => (r==="All" || d.region===r) && (c==="All" || d.country===c))
+    .filter(d => d.values.length > 0);
+
+  if (r === "All" && c === "All") {
+    const byRegion = d3.group(subset, d => d.region);
+    subset = Array.from(byRegion, ([region, countries]) => {
+      const allYears = new Set();
+      countries.forEach(country => {
+        country.values.forEach(v => allYears.add(v.year));
+      });
+
+      const values = Array.from(allYears).sort((a, b) => a - b).map(year => {
+        const totalArrivals = countries.reduce((sum, country) => {
+          const yearData = country.values.find(v => v.year === year);
+          return sum + (yearData ? yearData.arrivals : 0);
+        }, 0);
+        return { year, arrivals: totalArrivals };
+      });
+
+      return {
+        country: region,
+        region: region,
+        values: values
+      };
+    });
+  }
+
+  return subset;
 }
 
 function getFiltered(){
@@ -240,22 +288,33 @@ function render(withTransition=false){
   x.domain([min, max]);
 
   const measure = measureSelect.value;
-  const allValues = data.flatMap(d => d.values.map(v => v.arrivals));
-  let minY = measure === "growth" ? d3.min(allValues) : 0;
-  let maxY = d3.max(allValues) || 1;
+
+  // Calculate y-axis domain based on FULL range of filtered data, not just visible years
+  // This prevents jumping during play animation
+  let fullRangeData = getFilteredFullRange();
+  fullRangeData = applyMeasure(fullRangeData);
+  const allValuesFullRange = fullRangeData.flatMap(d => d.values.map(v => v.arrivals));
+  let minY = measure === "growth" ? d3.min(allValuesFullRange) : 0;
+  let maxY = d3.max(allValuesFullRange) || 1;
 
   const padding = (maxY - minY) * 0.05;
   y.domain([minY - padding, maxY + padding]);
 
   gx.call(d3.axisBottom(x).tickFormat(d3.format("d")).ticks(Math.min(10, max - min + 1)));
 
+  // Get scale info for y-axis
+  const scaleInfo = getScaleInfo(maxY, measure);
+
   let yAxisFormat;
   if (measure === "growth" || measure === "perCapita" || measure === "growthRate") {
     yAxisFormat = d => d3.format(".1f")(d) + "%";
   } else {
-    yAxisFormat = d => d3.format(",")(d);
+    yAxisFormat = d => d3.format(",")(d / scaleInfo.divisor);
   }
   gy.call(d3.axisLeft(y).ticks(Math.max(4, innerH/80)).tickFormat(yAxisFormat));
+
+  // Update y-axis label with scale suffix
+  updateYAxisLabel(scaleInfo.suffix);
 
   gridX.call(d3.axisBottom(x).tickSize(-innerH).tickFormat("").ticks(Math.min(10, max - min + 1)))
     .call(g => g.select(".domain").remove())
@@ -274,11 +333,11 @@ function render(withTransition=false){
 
   sel.exit()
     .transition()
-    .duration(withTransition ? 300 : 0)
+    .duration(withTransition ? 400 : 0)
     .style("opacity", 0)
     .remove();
 
-  const t = svg.transition().duration(withTransition ? 500 : 0);
+  const t = svg.transition().duration(withTransition ? 600 : 0);
 
   sel.select("path")
     .transition(t)
@@ -304,7 +363,7 @@ function render(withTransition=false){
   enter.append("title").text(d => d.country);
 
   enter.transition()
-    .duration(withTransition ? 300 : 0)
+    .duration(withTransition ? 600 : 0)
     .style("opacity", 1);
 
   updateLegend(data);
@@ -419,7 +478,7 @@ function togglePlay(){
     yearMin.value = startYear;
     yearMax.value = endYear;
     syncYears();
-  }, 600);
+  }, 800);
 }
 
 function stopPlay(){
@@ -556,8 +615,9 @@ function updateLegend(data) {
 
 function updateStats(data){
   const min = +yearMin.value, max = +yearMax.value;
+  const measure = measureSelect.value;
 
-  // If same year selected, show top countries by absolute arrivals
+  // For single year, show top by absolute arrivals
   if (min === max) {
     const topCountries = data
       .map(d => {
@@ -570,16 +630,76 @@ function updateStats(data){
       .slice(0, 5);
     const items = topCountries.map(d => `<li>${d.country}: ${d3.format(",")(d.arrivals)}</li>`).join("");
     stats.innerHTML = `<strong>Top destinations (${min}):</strong><ol>${items || "<li>n/a</li>"}</ol>`;
-  } else {
-    // compute top growth countries in range
-    const growth = data.map(d => {
-      const sourceData = d.originalValues || d.values;
-      const first = sourceData.find(v => v.year === min);
-      const last = sourceData.find(v => v.year === max);
-      const g = (first && last && first.arrivals > 0) ? ((last.arrivals - first.arrivals) / first.arrivals) : null;
-      return { country: d.country, region: d.region, growth: g, first: first, last: last };
-    }).filter(d => d.growth !== null && !isNaN(d.growth)).sort((a, b) => d3.descending(a.growth, b.growth)).slice(0, 5);
-    const items = growth.map(d => `<li>${d.country}: ${d.growth > 0 ? '+' : ''}${(d.growth * 100).toFixed(1)}%</li>`).join("");
-    stats.innerHTML = `<strong>Top growth (${min}–${max}):</strong><ol>${items || "<li>n/a</li>"}</ol>`;
+    return;
+  }
+
+  // For ranges, show stats based on current measure
+  switch(measure) {
+    case "growth": {
+      // Show top by average YoY growth
+      const topGrowth = data.map(d => {
+        const displayData = d.values.filter(v => v.arrivals !== undefined);
+        if (displayData.length < 2) return null;
+
+        const avgGrowth = d3.mean(displayData.slice(1).map(v => v.arrivals));
+        return { country: d.country, value: avgGrowth };
+      })
+      .filter(d => d && !isNaN(d.value))
+      .sort((a, b) => d3.descending(a.value, b.value))
+      .slice(0, 5);
+
+      const items = topGrowth.map(d => `<li>${d.country}: ${d.value > 0 ? '+' : ''}${d.value.toFixed(2)}%</li>`).join("");
+      stats.innerHTML = `<strong>Top average YoY growth (${min}–${max}):</strong><ol>${items || "<li>n/a</li>"}</ol>`;
+      break;
+    }
+
+    case "growthRate": {
+      // Show top by growth rate at end of period
+      const topGrowthRate = data.map(d => {
+        const lastValue = d.values.find(v => v.year === max);
+        return { country: d.country, value: lastValue ? lastValue.arrivals : 0 };
+      })
+      .filter(d => d.value > 0)
+      .sort((a, b) => d3.descending(a.value, b.value))
+      .slice(0, 5);
+
+      const items = topGrowthRate.map(d => `<li>${d.country}: ${d.value.toFixed(1)}% of 1995</li>`).join("");
+      stats.innerHTML = `<strong>Top growth rate in ${max}:</strong><ol>${items || "<li>n/a</li>"}</ol>`;
+      break;
+    }
+
+    case "perCapita": {
+      // Show top by normalized performance at end of period
+      const topNormalized = data.map(d => {
+        const lastValue = d.values.find(v => v.year === max);
+        return { country: d.country, value: lastValue ? lastValue.arrivals : 0 };
+      })
+      .filter(d => d.value > 0)
+      .sort((a, b) => d3.descending(a.value, b.value))
+      .slice(0, 5);
+
+      const items = topNormalized.map(d => `<li>${d.country}: ${d.value.toFixed(1)}% of peak</li>`).join("");
+      stats.innerHTML = `<strong>Top normalized in ${max}:</strong><ol>${items || "<li>n/a</li>"}</ol>`;
+      break;
+    }
+
+    case "absolute":
+    default: {
+      // Show top by absolute growth in arrivals
+      const growth = data.map(d => {
+        const sourceData = d.originalValues || d.values;
+        const first = sourceData.find(v => v.year === min);
+        const last = sourceData.find(v => v.year === max);
+        const g = (first && last && first.arrivals > 0) ? ((last.arrivals - first.arrivals) / first.arrivals) : null;
+        return { country: d.country, region: d.region, growth: g, first: first, last: last };
+      })
+      .filter(d => d.growth !== null && !isNaN(d.growth))
+      .sort((a, b) => d3.descending(a.growth, b.growth))
+      .slice(0, 5);
+
+      const items = growth.map(d => `<li>${d.country}: ${d.growth > 0 ? '+' : ''}${(d.growth * 100).toFixed(1)}%</li>`).join("");
+      stats.innerHTML = `<strong>Top growth (${min}–${max}):</strong><ol>${items || "<li>n/a</li>"}</ol>`;
+      break;
+    }
   }
 }
